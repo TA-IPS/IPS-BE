@@ -1,0 +1,1 @@
+export class CreateFingerprintDto { attempt: number; x: number; y: number; z: number; AP1: number; AP2: number; AP3: number; AP4: number; AP5: number; AP6: number; AP7: number; AP8: number; AP9: number; AP10: number; AP11: number; AP12: number; AP13: number; AP14: number; AP15: number; AP16: number; AP17: number; AP18: number; AP19: number; AP20: number; }
