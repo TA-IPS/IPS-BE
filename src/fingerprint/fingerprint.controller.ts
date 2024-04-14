@@ -2,18 +2,22 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { FingerprintService } from './fingerprint.service';
 import { CreateFingerprintDto } from './dto/create-fingerprint.dto';
 import { UpdateFingerprintDto } from './dto/update-fingerprint.dto';
+import { BssidService } from 'src/bssid/bssid.service';
 
 @Controller('fingerprint')
 export class FingerprintController {
-  constructor(private readonly fingerprintService: FingerprintService) {}
+  constructor(private readonly fingerprintService: FingerprintService,
+              private readonly bssidService: BssidService) {}
 
   @Post()
   create(@Body() createFingerprintDto: CreateFingerprintDto) {
+    this.bssidService.createMany(createFingerprintDto.wifi)
     return this.fingerprintService.create(createFingerprintDto);
   }
 
   @Get()
   findAll() {
+    console.log("kepanggil")
     return this.fingerprintService.findAll();
   }
 

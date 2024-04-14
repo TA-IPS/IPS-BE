@@ -12,6 +12,7 @@ export class FingerprintService {
     private fingerprintRepository: Repository<Fingerprint>,
   ) {}
   async create(createFingerprintDto: CreateFingerprintDto) {
+    console.log(createFingerprintDto)
     const result = await this.fingerprintRepository.save(createFingerprintDto);
   }
 

@@ -4,9 +4,10 @@ import { AppService } from './app.service';
 import { FingerprintModule } from './fingerprint/fingerprint.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { BssidModule } from './bssid/bssid.module';
 
 @Module({
-  imports: [FingerprintModule,
+  imports: [
   TypeOrmModule.forRootAsync({
     imports: [ConfigModule],
     useFactory: (configService: ConfigService) => ({
@@ -24,6 +25,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
     }),
     inject: [ConfigService],
   }),
+  FingerprintModule,
+  BssidModule,
   ],
 
   controllers: [AppController],
