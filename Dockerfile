@@ -16,5 +16,11 @@ COPY . .
 # Expose port 3000 (the default port used by NestJS)
 EXPOSE 3000
 
+ENV DATABASE_HOST=34.128.107.7
+ENV DATABASE_PORT=5432
+ENV DATABASE_USERNAME=postgres
+ENV DATABASE_NAME=skripsi
+ENV DATABASE_PASSWORD=postgres
+
 # Command to run the application
 CMD ["npm", "run", "start:prod"]
