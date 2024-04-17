@@ -17,7 +17,6 @@ export class FingerprintController {
 
   @Get()
   findAll() {
-    console.log("kepanggil")
     return this.fingerprintService.findAll();
   }
 

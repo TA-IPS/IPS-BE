@@ -13,6 +13,9 @@ import { BssidModule } from './bssid/bssid.module';
     useFactory: (configService: ConfigService) => ({
       type: 'postgres',
       host: configService.get('DATABASE_HOST'),
+      extra: {
+        socketPath: configService.get('DATABASE_HOST'),
+      },
       port: +configService.get<number>('DATABASE_PORT'),
       username: configService.get('DATABASE_USERNAME'),
       password: configService.get('DATABASE_PASSWORD'),

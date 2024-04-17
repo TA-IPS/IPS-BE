@@ -16,8 +16,8 @@ export class FingerprintService {
     const result = await this.fingerprintRepository.save(createFingerprintDto);
   }
 
-  findAll() {
-    return `This action returns all fingerprint`;
+  async findAll() {
+    return await this.fingerprintRepository.find();
   }
 
   findOne(id: number) {
