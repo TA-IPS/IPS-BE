@@ -1,0 +1,13 @@
+steps:
+# Build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/gothic-style-420511/ips-be', '.']
+# Push the container image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/gothic-style-420511/ips-be']
+# Deploy container image to Cloud Run
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args: ['run', 'deploy', 'ips-be', '--image', 'gcr.io/gothic-style-420511/ips-be, '--region', 'us-central1', '--platform', 'managed', '--port', '3000']
+images:
+- gcr.io/gothic-style-420511/ips-be

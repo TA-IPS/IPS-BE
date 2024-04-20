@@ -441,4 +441,130 @@ export class Fingerprint extends BaseEntity {
 
     @Column({ type: "float", nullable: true })
     ap140: number;
+
+    @Column({ type: "float", nullable: true })
+    ap141: number;
+
+    @Column({ type: "float", nullable: true })
+    ap142: number;
+
+    @Column({ type: "float", nullable: true })
+    ap143: number;
+
+    @Column({ type: "float", nullable: true })
+    ap144: number;
+
+    @Column({ type: "float", nullable: true })
+    ap145: number;
+
+    @Column({ type: "float", nullable: true })
+    ap146: number;
+
+    @Column({ type: "float", nullable: true })
+    ap147: number;
+
+    @Column({ type: "float", nullable: true })
+    ap148: number;
+
+    @Column({ type: "float", nullable: true })
+    ap149: number;
+
+    @Column({ type: "float", nullable: true })
+    ap150: number;
+
+    @Column({ type: "float", nullable: true })
+    ap151: number;
+
+    @Column({ type: "float", nullable: true })
+    ap152: number;
+
+    @Column({ type: "float", nullable: true })
+    ap153: number;
+
+    @Column({ type: "float", nullable: true })
+    ap154: number;
+
+    @Column({ type: "float", nullable: true })
+    ap155: number;
+
+    @Column({ type: "float", nullable: true })
+    ap156: number;
+
+    @Column({ type: "float", nullable: true })
+    ap157: number;
+
+    @Column({ type: "float", nullable: true })
+    ap158: number;
+
+    @Column({ type: "float", nullable: true })
+    ap159: number;
+
+    @Column({ type: "float", nullable: true })
+    ap160: number;
+
+    @Column({ type: "float", nullable: true })
+    ap161: number;
+
+    @Column({ type: "float", nullable: true })
+    ap162: number;
+
+    @Column({ type: "float", nullable: true })
+    ap163: number;
+
+    @Column({ type: "float", nullable: true })
+    ap164: number;
+
+    @Column({ type: "float", nullable: true })
+    ap165: number;
+
+    @Column({ type: "float", nullable: true })
+    ap166: number;
+
+    @Column({ type: "float", nullable: true })
+    ap167: number;
+
+    @Column({ type: "float", nullable: true })
+    ap168: number;
+
+    @Column({ type: "float", nullable: true })
+    ap169: number;
+
+    @Column({ type: "float", nullable: true })
+    ap170: number;
+
+    @Column({ type: "float", nullable: true })
+    ap171: number;
+
+    @Column({ type: "float", nullable: true })
+    ap172: number;
+
+    @Column({ type: "float", nullable: true })
+    ap173: number;
+
+    @Column({ type: "float", nullable: true })
+    ap174: number;
+
+    @Column({ type: "float", nullable: true })
+    ap175: number;
+
+    @Column({ type: "float", nullable: true })
+    ap176: number;
+
+    @Column({ type: "float", nullable: true })
+    ap177: number;
+
+    @Column({ type: "float", nullable: true })
+    ap178: number;
+
+    @Column({ type: "float", nullable: true })
+    ap179: number;
+
+    @Column({ type: "float", nullable: true })
+    ap180: number;
+
+    @Column({ type: "float", nullable: true })
+    ap181: number;
+
+    @Column({ type: "float", nullable: true })
+    ap182: number;
 }
