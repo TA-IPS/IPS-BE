@@ -31,4 +31,22 @@ export class FingerprintService {
   remove(id: number) {
     return `This action removes a #${id} fingerprint`;
   }
+
+  async getGrids() {
+    const res = await this.fingerprintRepository.createQueryBuilder('fingerprint')
+      .select(['x', 'y', 'z'])
+      .distinct(true)
+      .getRawMany();
+
+    const groupedResults: Record<number, { x: number, y: number }[]> = {};
+
+    res.forEach(result => {
+      const { x, y, z } = result;
+      if (!groupedResults[z]) {
+        groupedResults[z] = [];
+      }
+      groupedResults[z].push({ x, y });
+    });
+    return groupedResults;
+  }
 }
